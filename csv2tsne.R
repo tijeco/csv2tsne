@@ -14,7 +14,7 @@ colors = rainbow(length(unique(train$label)))
 names(colors) = unique(train$label)
 
 ## Executing the algorithm on curated data
-tsne <- Rtsne(train[,-1], dims = 2, perplexity=30, verbose=TRUE, max_iter = 500)
+tsne <- Rtsne(train[,-1], dims = 2, perplexity=30, verbose=TRUE, max_iter = 500,check_duplicates=F)
 #exeTimeTsne<- system.time(Rtsne(train[,-1], dims = 2, perplexity=30, verbose=TRUE, max_iter = 500))
 
 ## Plotting
